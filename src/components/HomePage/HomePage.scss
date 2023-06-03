@@ -1,0 +1,39 @@
+@import "/src/utils/variables.scss";
+
+.homepage {
+    &__container {
+        height: 100vh;
+        display: grid;
+        place-content: center;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1em;
+        font-weight: bold;
+
+        &__intro {
+            background-color: $secondary-color;
+            padding: 0.8em 1.5em;
+            border-top-left-radius: 1.25rem;
+            border-top-right-radius: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+            border-bottom-left-radius: 0;
+        }
+
+        &__name {
+            font-size: 3.5rem;
+        }
+
+        &__title {
+            font-size: 1.625rem;
+        }
+
+        &__svg {
+            margin-left: 0.625rem;
+        }
+    }
+}
