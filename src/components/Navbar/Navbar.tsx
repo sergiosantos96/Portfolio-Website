@@ -1,5 +1,5 @@
 import { DarkModeSwitch } from "../shared/DarkModeSwitch/DarkModeSwitch";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -8,24 +8,44 @@ const Navbar = () => {
       <label className="navbar__name">Sérgio</label>
       <ul className="navbar__list">
         <li>
-          <Link className="navbar__link" to="/">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "navbar__link-active" : "navbar__link"
+            }
+            to="/"
+          >
             Home
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link className="navbar__link" to="/about">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "navbar__link-active" : "navbar__link"
+            }
+            to="/about"
+          >
             About
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link className="navbar__link" to="/experiences">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "navbar__link-active" : "navbar__link"
+            }
+            to="/experiences"
+          >
             Experiences
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link className="navbar__link" to="/portfolio">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "navbar__link-active" : "navbar__link"
+            }
+            to="/portfolio"
+          >
             Portfolio
-          </Link>
+          </NavLink>
         </li>
         <li>
           <DarkModeSwitch />

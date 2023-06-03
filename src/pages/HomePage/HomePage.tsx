@@ -1,7 +1,7 @@
-import Button from "../shared/Button/Button";
 import Resume from "../../assets/SergioSantos_Resume.pdf";
 import { FaDownload } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import Button from "../../components/shared/Button/Button";
 import "./HomePage.scss";
 
 const HomePage = () => {

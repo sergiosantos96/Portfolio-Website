@@ -18,7 +18,17 @@
         gap: 5em;
         margin-left: 50%;
     }
-    &__link:hover {
-        color: $secondary-color;
+
+    &__link {
+        &-active {
+            padding-bottom: 0.5em;
+            border-bottom: 0.1875rem solid $secondary-color;
+            transition: 250ms;
+        }
+
+        &:hover {
+            transition: 300ms;
+            color: $secondary-color;
+        }
     }
 }

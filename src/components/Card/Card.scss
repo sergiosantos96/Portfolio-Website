@@ -1,0 +1,28 @@
+@import "../../utils/variables.scss";
+
+.card {
+    height: 15em;
+    width: 22em;
+    background-color: $dark-color;
+    border-radius: 0.25rem;
+    box-shadow: -1rem 0 3rem #000;
+    position: relative;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1em;
+        gap: 1.5em;
+    }
+
+    &__title {
+        font-size: 1.4rem;
+        font-size: bold;
+    }
+}
