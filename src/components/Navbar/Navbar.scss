@@ -1,9 +1,9 @@
 @import "/src/utils/variables.scss";
+@import "/src/utils/mixings.scss";
 
 .navbar {
     display: flex;
     align-items: center;
-    margin-top: 0.5em;
     width: 100%;
     font-size: 1.1rem;
 
@@ -20,15 +20,31 @@
     }
 
     &__link {
+        #light & {
+            @include theme(null, $dark-color);
+        }
+        #dark & {
+            @include theme(null, $light-color);
+        }
+
         &-active {
+            #light & {
+                @include theme(null, $dark-color);
+            }
+            #dark & {
+                @include theme(null, $light-color);
+            }
             padding-bottom: 0.5em;
             border-bottom: 0.1875rem solid $secondary-color;
-            transition: 250ms;
         }
 
         &:hover {
-            transition: 300ms;
-            color: $secondary-color;
+            #light & {
+                color: $secondary-color;
+            }
+            #dark & {
+                color: $secondary-color;
+            }
         }
     }
 }

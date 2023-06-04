@@ -9,12 +9,13 @@ export const ExperiencesPage = () => {
         Education &
         <span className="experiencespage__title__experience"> Experience</span>
       </h2>
-      <div className="experiencepage__cards">
+      <div className="experiencespage__cards">
         {experienceCardData.map(
           (
             {
               companyName,
               companyLogo,
+              colorGradient,
               jobPosition,
               jobDescription,
               startDateAndStopDate,
@@ -25,6 +26,7 @@ export const ExperiencesPage = () => {
               key={index}
               companyName={companyName}
               companyLogo={companyLogo}
+              colorGradient={colorGradient}
               jobPosition={jobPosition}
               jobDescription={jobDescription}
               startDateAndStopDate={startDateAndStopDate}

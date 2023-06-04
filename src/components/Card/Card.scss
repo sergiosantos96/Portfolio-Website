@@ -1,16 +1,16 @@
 @import "../../utils/variables.scss";
+@import "../../utils/mixings.scss";
 
 .card {
     height: 15em;
     width: 22em;
-    background-color: $dark-color;
     border-radius: 0.25rem;
-    box-shadow: -1rem 0 3rem #000;
+    box-shadow: $box-shadow;
     position: relative;
     transition: transform 0.3s ease;
 
     &:hover {
-        transform: translateY(-5px);
+        @include slide-up-hover;
     }
 
     &__content {

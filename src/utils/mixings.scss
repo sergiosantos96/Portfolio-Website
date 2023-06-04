@@ -1,0 +1,14 @@
+/* Animations */
+@mixin slide-up-hover() {
+    transform: translateY(-5px);
+}
+
+@mixin theme($background-color: null, $color: null) {
+    @if $background-color != null {
+        background-color: $background-color;
+    }
+
+    @if $color != null {
+        color: $color;
+    }
+}

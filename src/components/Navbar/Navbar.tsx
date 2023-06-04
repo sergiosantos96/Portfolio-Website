@@ -1,5 +1,5 @@
-import { DarkModeSwitch } from "../shared/DarkModeSwitch/DarkModeSwitch";
 import { NavLink } from "react-router-dom";
+import DarkModeSwitch from "../shared/DarkModeSwitch/DarkModeSwitch";
 import "./Navbar.scss";
 
 const Navbar = () => {

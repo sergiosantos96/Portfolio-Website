@@ -5,10 +5,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     &__title {
         &__experience {
             color: $secondary-color;
         }
+    }
+
+    &__cards {
+        margin-top: 2em;
+        display: flex;
+        gap: 3em;
     }
 }

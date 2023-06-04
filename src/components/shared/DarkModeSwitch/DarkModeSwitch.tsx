@@ -1,28 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import Switch from "react-switch";
+import { ThemeContext } from "../../../App";
 
-import "./DarkModeSwitch.scss";
+function DarkModeSwitch() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
-interface SwitchState {
-  checked: boolean;
+  const handleChange = () => {
+    toggleTheme();
+  };
+
+  return (
+    <label className="darkmode">
+      <Switch onChange={handleChange} checked={theme === "dark"} />
+    </label>
+  );
 }
 
-export class DarkModeSwitch extends React.Component<object, SwitchState> {
-  constructor(props: SwitchState) {
-    super(props);
-    this.state = { checked: false };
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(checked: boolean) {
-    this.setState({ checked });
-  }
-
-  render() {
-    return (
-      <label className="darkmode">
-        <Switch onChange={this.handleChange} checked={this.state.checked} />
-      </label>
-    );
-  }
-}
+export default DarkModeSwitch;

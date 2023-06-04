@@ -1,8 +1,73 @@
 @import "../../utils/variables.scss";
+@import "../../utils/mixings.scss";
 
 .experiencecard {
-    height: 20em;
-    width: 14em;
-    border: 0.0625rem solid $dark-color;
-    border-radius: 0.1875rem;
+    height: 30em;
+    width: 20em;
+    border-radius: 0.625rem;
+    padding: 2.8em 3em;
+    background-color: #202026;
+    position: relative;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    transition: 250ms;
+
+    #light & {
+        @include theme($light-color, $dark-color);
+    }
+
+    &:hover {
+        @include slide-up-hover;
+    }
+
+    &__gradient {
+        width: 100%;
+        height: 28%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__company {
+        display: flex;
+        flex-direction: column;
+        gap: 2.6em;
+        align-items: center;
+
+        &__name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 999;
+            color: $light-color;
+        }
+
+        &__logo {
+            width: 5em;
+            height: 5em;
+            border-radius: 50%;
+            z-index: 999;
+        }
+
+        &__position {
+            font-size: 1.5rem;
+        }
+
+        &__description {
+            line-height: 1.6em;
+        }
+
+        &__timer {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@mixin theme($background-color: null, $color: null) {
+    @if $background-color != null {
+        background-color: $background-color;
+    }
+
+    @if $color != null {
+        color: $color;
+    }
 }
