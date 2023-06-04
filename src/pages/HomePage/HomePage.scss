@@ -1,10 +1,20 @@
 @import "/src/utils/variables.scss";
+@import "/src/utils/mixings.scss";
 
 .homepage {
     &__container {
         height: 100vh;
         display: grid;
+        grid-template-columns: 1fr 1fr;
         place-content: center;
+    }
+
+    &__img {
+        margin-bottom: 12em;
+        height: 20vw;
+        width: 20vw;
+        transform: scale(1);
+        animation: pulse 2s infinite;
     }
 
     &__info {
@@ -22,18 +32,64 @@
             border-top-right-radius: 1.25rem;
             border-bottom-right-radius: 1.25rem;
             border-bottom-left-radius: 0;
+            @include slide-down-opacity(1s);
         }
 
         &__name {
             font-size: 3.5rem;
+            @include slide-right-opacity(1.8s);
         }
 
         &__title {
             font-size: 1.625rem;
+            overflow: hidden;
+            border-right: 0.15em solid $secondary-color;
+            white-space: nowrap;
+            margin: 0;
+            margin-left: 0;
+            letter-spacing: 0.1em;
+            animation: typing 2.5s steps(50, end), blink 0.75s step-end infinite;
+        }
+
+        &__btn {
+            @include fade-in(1.8s);
         }
 
         &__svg {
             margin-left: 0.625rem;
         }
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: $secondary-color;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.95);
     }
 }

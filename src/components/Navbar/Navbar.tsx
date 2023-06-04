@@ -5,7 +5,10 @@ import "./Navbar.scss";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <label className="navbar__name">Sérgio</label>
+      <label className="navbar__name">
+        <span className="navbar__initial">S</span>
+        érgio
+      </label>
       <ul className="navbar__list">
         <li>
           <NavLink
@@ -25,16 +28,6 @@ const Navbar = () => {
             to="/about"
           >
             About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "navbar__link-active" : "navbar__link"
-            }
-            to="/experiences"
-          >
-            Experiences
           </NavLink>
         </li>
         <li>

@@ -3,6 +3,64 @@
     transform: translateY(-5px);
 }
 
+@mixin slide-up-opacity($duration) {
+    animation: slide-up-opacity $duration ease-in-out both;
+}
+
+@keyframes slide-up-opacity {
+    0% {
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@mixin slide-down-opacity($duration) {
+    animation: slide-down-opacity $duration ease-in-out both;
+}
+
+@keyframes slide-down-opacity {
+    0% {
+        transform: translateY(-70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@mixin slide-right-opacity($duration) {
+    animation: slide-right-opacity $duration ease-in-out both;
+}
+
+@keyframes slide-right-opacity {
+    0% {
+        transform: translateX(-70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@mixin fade-in($duration) {
+    animation: fade-in $duration ease-in-out both;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @mixin theme($background-color: null, $color: null) {
     @if $background-color != null {
         background-color: $background-color;

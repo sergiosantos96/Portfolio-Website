@@ -8,7 +8,12 @@
     font-size: 1.1rem;
 
     &__name {
+        font-size: 1.4rem;
         margin-left: 2em;
+    }
+
+    &__initial {
+        color: $secondary-color;
     }
 
     &__list {

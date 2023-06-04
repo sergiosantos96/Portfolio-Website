@@ -1,0 +1,20 @@
+.footer {
+    height: 10vh;
+
+    &__divider {
+        border: 0.0625rem solid #ccc;
+    }
+
+    &__links {
+        display: flex;
+        gap: 0.8em;
+        cursor: pointer;
+    }
+
+    &__container {
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}

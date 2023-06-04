@@ -1,14 +1,22 @@
 @import "../../../utils/variables.scss";
+@import "../../../utils/mixings.scss";
 
 .button {
     padding: 0.7em 1.3em;
     background-color: $secondary-color;
     border: 1px solid $dark-color;
     border-style: none;
-    color: $light-color;
+
     border-radius: 1.25rem;
     font-size: 1.1rem;
     font-weight: bold;
+
+    #light & {
+        @include theme(null, $dark-color);
+    }
+    #dark & {
+        @include theme(null, $light-color);
+    }
 
     &:active {
         transform: scale(0.93);

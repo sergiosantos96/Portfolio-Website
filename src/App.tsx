@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { PageRouter } from "./routes/Routes";
 import { createContext, useState } from "react";
 import "./App.scss";
+import { Footer } from "./components/Footer/Footer";
 
 export const ThemeContext = createContext({
   theme: "",
@@ -21,6 +22,7 @@ function App() {
         <div id={theme}>
           <Navbar />
           <PageRouter />
+          <Footer />
         </div>
       </ThemeContext.Provider>
     </>

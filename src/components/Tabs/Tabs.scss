@@ -1,0 +1,25 @@
+@import "../../utils/variables.scss";
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.5em;
+    width: 100%;
+
+    &__tab {
+        display: block;
+
+        &-active {
+            padding-bottom: 0.5em;
+            border-bottom: 0.1875rem solid $secondary-color;
+            &:after {
+                width: 90%;
+            }
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        border-radius: 0;
+    }
+}

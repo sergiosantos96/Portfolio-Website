@@ -1,0 +1,29 @@
+@import "../../utils/variables.scss";
+@import "../../utils/mixings.scss";
+
+.skillcard {
+    height: 15em;
+    width: 22em;
+    border-radius: 0.25rem;
+    box-shadow: $box-shadow;
+    position: relative;
+    transition: transform 0.3s ease;
+    @include slide-up-opacity(1.2s);
+
+    &:hover {
+        @include slide-up-hover;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1em;
+        gap: 1.5em;
+    }
+
+    &__title {
+        font-size: 1.4rem;
+        font-size: bold;
+    }
+}

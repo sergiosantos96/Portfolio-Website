@@ -1,7 +1,7 @@
-import Card from "../../components/Card/Card";
 import { IconContext } from "react-icons";
-import { cardData } from "../../components/Card/CardData";
 import { skills } from "../../utils/data";
+import { cardSkillsData } from "../../components/SkillsCard/SkillsCardData";
+import SkillsCard from "../../components/SkillsCard/SkillsCard";
 import "./AboutPage.scss";
 
 const AboutPage = () => {
@@ -24,8 +24,12 @@ const AboutPage = () => {
       <div className="aboutpage__info">
         <h2 className="aboutpage__info__subtitle">What I do</h2>
         <div className="aboutpage__info__cards">
-          {cardData.map((card, index) => (
-            <Card key={index} title={card.title} description={card.description}>
+          {cardSkillsData.map((card, index) => (
+            <SkillsCard
+              key={index}
+              title={card.title}
+              description={card.description}
+            >
               <IconContext.Provider
                 value={{
                   size: "2.2em",
@@ -34,7 +38,7 @@ const AboutPage = () => {
               >
                 {card.icon}
               </IconContext.Provider>
-            </Card>
+            </SkillsCard>
           ))}
         </div>
       </div>
