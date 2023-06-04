@@ -11,12 +11,19 @@
 
     &__title {
         font-size: 2.1rem;
+        @include slide-down-opacity(2.5s);
+    }
+
+    &__description {
+        font-size: 1.2rem;
+        @include slide-down-opacity(2s);
     }
 
     &__skills {
         display: flex;
         flex-direction: row;
         gap: 1em;
+        @include slide-down-opacity(1.7s);
     }
 
     &__skill {
@@ -28,6 +35,7 @@
         flex-direction: row;
         text-align: center;
         border: 0.125rem solid $secondary-color;
+        @include slide-down-opacity(1s);
     }
 
     &__info {

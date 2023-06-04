@@ -1,11 +1,11 @@
 import Card from "../../components/Card/Card";
 import { Tabs } from "../../components/Tabs/Tabs";
 import { useState } from "react";
-import DarkModeSwitch from "../../components/shared/DarkModeSwitch/DarkModeSwitch";
 import {
   educationCardData,
   experienceCardData,
 } from "../../components/Card/CardData";
+import ProjectsCard from "../../components/ProjectsCard/PortfolioCard";
 import "./PortfolioPage.scss";
 
 export const PortfolioPage = () => {
@@ -77,7 +77,7 @@ export const PortfolioPage = () => {
           )}
         </div>
       )}
-      {selectedTab === "portfolio" && <DarkModeSwitch />}
+      {selectedTab === "portfolio" && <ProjectsCard />}
     </div>
   );
 };

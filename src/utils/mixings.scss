@@ -60,7 +60,8 @@
         opacity: 1;
     }
 }
-
+/* Dark Mode */
+/* This fixes some issues where, some components were using the opposite color of what they were meant to have when switching between dark and light mode */
 @mixin theme($background-color: null, $color: null) {
     @if $background-color != null {
         background-color: $background-color;

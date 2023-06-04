@@ -11,6 +11,7 @@
     box-shadow: $box-shadow;
     overflow: hidden;
     transition: 250ms;
+    @include fade-in(1.2s);
 
     #light & {
         @include theme($light-color, $dark-color);

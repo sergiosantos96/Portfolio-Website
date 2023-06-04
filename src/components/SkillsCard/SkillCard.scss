@@ -2,17 +2,13 @@
 @import "../../utils/mixings.scss";
 
 .skillcard {
-    height: 15em;
-    width: 22em;
+    height: 18em;
+    width: 25em;
     border-radius: 0.25rem;
     box-shadow: $box-shadow;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: 250ms;
     @include slide-up-opacity(1.2s);
-
-    &:hover {
-        @include slide-up-hover;
-    }
 
     &__content {
         display: flex;
@@ -25,5 +21,9 @@
     &__title {
         font-size: 1.4rem;
         font-size: bold;
+    }
+
+    &__description {
+        line-height: 1.8em;
     }
 }
