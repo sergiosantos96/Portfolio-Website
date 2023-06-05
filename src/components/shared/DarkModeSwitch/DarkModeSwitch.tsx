@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import Switch from "react-switch";
 import { ThemeContext } from "../../../App";
-import "./DarkModeSwitch.scss";
 
 function DarkModeSwitch() {
   const { theme, toggleTheme } = useContext(ThemeContext);
