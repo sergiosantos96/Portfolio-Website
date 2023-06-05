@@ -1,7 +1,7 @@
 {
-  "homepage": "http://sergiosantos96.github.io/Portfolio-Website",
+  "homepage": "http://sergiosantos96.github.io/portfolio-website",
   "name": "portfolio-website",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
