@@ -1,8 +1,7 @@
-import DarkModeSwitch from "../shared/DarkModeSwitch/DarkModeSwitch";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-import "./Footer.scss";
 import { IconContext } from "react-icons";
+import "./Footer.scss";
 
 export const Footer = () => {
   return (
@@ -36,7 +35,6 @@ export const Footer = () => {
           </a>
         </div>
         <label>Copyright © Sérgio Santos🚀</label>
-        <DarkModeSwitch />
       </div>
     </div>
   );

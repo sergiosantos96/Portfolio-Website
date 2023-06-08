@@ -3,6 +3,7 @@
     transform: translateY(-5px);
 }
 
+/* Slide Up Opacity */
 @mixin slide-up-opacity($duration) {
     animation: slide-up-opacity $duration ease-in-out both;
 }
@@ -18,6 +19,7 @@
     }
 }
 
+/* Slide Down Opacity */
 @mixin slide-down-opacity($duration) {
     animation: slide-down-opacity $duration ease-in-out both;
 }
@@ -33,6 +35,7 @@
     }
 }
 
+/* Slide Right Opacity */
 @mixin slide-right-opacity($duration) {
     animation: slide-right-opacity $duration ease-in-out both;
 }
@@ -48,6 +51,7 @@
     }
 }
 
+/* Fade In */
 @mixin fade-in($duration) {
     animation: fade-in $duration ease-in-out both;
 }

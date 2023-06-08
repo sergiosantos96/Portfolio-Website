@@ -5,8 +5,8 @@ import FlagLogo from "../../assets/logos/flag-logo.png";
 
 export const experienceCardData: CardModel[] = [
   {
-    name: "_Everywhere",
-    logo: EverywhereLogo,
+    cardName: "_Everywhere",
+    cardLogo: EverywhereLogo,
     colorGradient: "linear-gradient(to bottom right, #6c63ff, #a55fff)",
     jobPosition: "Front-End Developer Intern",
     description:
@@ -14,8 +14,8 @@ export const experienceCardData: CardModel[] = [
     startDateAndStopDate: "2022-02 - 2022-05",
   },
   {
-    name: "SmartMed B.V.",
-    logo: SmartMedLogo,
+    cardName: "SmartMed B.V.",
+    cardLogo: SmartMedLogo,
     colorGradient: "linear-gradient(to right, #1a237e, #00bcd4)",
     jobPosition: "Software Engineer",
     description:
@@ -26,8 +26,8 @@ export const experienceCardData: CardModel[] = [
 
 export const educationCardData: CardModel[] = [
   {
-    name: "Flag",
-    logo: FlagLogo,
+    cardName: "Flag",
+    cardLogo: FlagLogo,
     colorGradient: "linear-gradient(to right, #FF512F, #F09819)",
     degree: "Full Stack Web Developer",
     description:

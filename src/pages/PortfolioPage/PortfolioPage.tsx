@@ -27,8 +27,8 @@ export const PortfolioPage = () => {
           {experienceCardData.map(
             (
               {
-                name: companyName,
-                logo: companyLogo,
+                cardName,
+                cardLogo,
                 colorGradient,
                 jobPosition,
                 description: jobDescription,
@@ -38,8 +38,8 @@ export const PortfolioPage = () => {
             ) => (
               <Card
                 key={index}
-                name={companyName}
-                logo={companyLogo}
+                cardName={cardName}
+                cardLogo={cardLogo}
                 colorGradient={colorGradient}
                 jobPosition={jobPosition}
                 description={jobDescription}
@@ -49,14 +49,13 @@ export const PortfolioPage = () => {
           )}
         </div>
       )}
-
       {selectedTab === "education" && (
         <div className="portfoliopage__cards">
           {educationCardData.map(
             (
               {
-                name: companyName,
-                logo: companyLogo,
+                cardName,
+                cardLogo,
                 colorGradient,
                 degree,
                 description: courseDescription,
@@ -66,8 +65,8 @@ export const PortfolioPage = () => {
             ) => (
               <Card
                 key={index}
-                name={companyName}
-                logo={companyLogo}
+                cardName={cardName}
+                cardLogo={cardLogo}
                 colorGradient={colorGradient}
                 degree={degree}
                 description={courseDescription}

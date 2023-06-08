@@ -1,5 +1,4 @@
 /* Generic data goes here */
-
 export const skills = [
   "Html5",
   "CSS",

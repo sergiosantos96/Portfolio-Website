@@ -6,7 +6,7 @@ import "./Routes.scss";
 
 export const PageRouter = () => {
   return (
-    <div className="container">
+    <div className="rounter__container">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />

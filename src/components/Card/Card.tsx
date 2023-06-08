@@ -1,8 +1,8 @@
-import "./Card.scss";
 import { useEffect, useState } from "react";
+import "./Card.scss";
 export interface CardModel {
-  name: string;
-  logo: string;
+  cardName: string;
+  cardLogo: string;
   colorGradient: string;
   jobPosition?: string;
   degree?: string;
@@ -11,8 +11,8 @@ export interface CardModel {
 }
 
 const Card: React.FC<CardModel> = ({
-  name,
-  logo,
+  cardName,
+  cardLogo,
   colorGradient,
   degree,
   jobPosition,
@@ -43,24 +43,23 @@ const Card: React.FC<CardModel> = ({
       days: days % 365,
       hours: hours % 24,
       minutes: minutes % 60,
-      seconds: seconds % 60,
     };
   };
 
   const { years, days, hours, minutes } = getElapsedTime();
 
   const cardStyle = {
-    background: colorGradient ? `${colorGradient}` : "transparent",
+    background: colorGradient,
   };
 
   return (
     <div className="card">
       <div className="card__gradient" style={cardStyle}></div>
       <div className="card__institution">
-        <label className="card__institution__name">{name}</label>
+        <label className="card__institution__name">{cardName}</label>
         <img
           className="card__institution__logo"
-          src={logo}
+          src={cardLogo}
           alt="institution-logo"
         />
         <label className="card__institution__position">{jobPosition}</label>
